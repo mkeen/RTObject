@@ -1,4 +1,4 @@
-describe 'An object map with change notifications', ->
+describe 'An object map with asynchronous change notifications', ->
   it 'can be initialized with a native object', ->
     native_object = key1: 'value1', key2: 'value2'
     obj = new RTObject native_object
