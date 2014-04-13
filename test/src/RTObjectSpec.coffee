@@ -9,9 +9,7 @@ describe 'An object map with asynchronous change notifications', ->
       or its value modified', ->
     native_object = key1: 'value1', key2: 'value2'
     modified_object = key1: 'diff_value', key2: 'value2', key3: '123'
-    callback = (key, value, old_value) ->
-      console.log("called")
-    obj = new RTObject native_object, callback
+    obj = new RTObject native_object
     spyOn obj, 'changed'
     obj.set modified_object
     expect obj.changed
